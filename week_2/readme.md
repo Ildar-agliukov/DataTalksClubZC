@@ -15,3 +15,18 @@ df["lpep_pickup_datetime"] = pd.to_datetime(df["tpep_pickup_datetime"])
 df["lpep_dropoff_datetime"] = pd.to_datetime(df["tpep_dropoff_datetime"])
 ```
 ___
+# Second task
+
+0 5 1 * *
+
+by clt i build the deployment_file
+
+```bash
+prefect deployment build etl_web_to_gcs.py:etl_web_to_gcs -n "etl_with_cron" --cron "0 5 1 * *"
+```
+and the file was added to the perfect by
+```bash
+prefect deployment apply etl_web_to_gcs-deployment.yaml
+```
+___
+# Third task
